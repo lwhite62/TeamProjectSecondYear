@@ -1,0 +1,155 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+}
+
+/*Welcome text*/
+.upper{   
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    z-index: 1;
+}
+
+.lower{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+}
+
+/*GDPR popup*/
+.popup{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 50vw;
+    left: 25vw;
+    margin-top: 5px;
+    height: 80vh;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+.popup .accept{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.gdpr{
+    height: 55vh;
+    overflow-y: scroll;
+    font-size: 10px;
+}
+
+.gdpr h1{
+    font-size: 25px;
+}
+
+.gdpr h2{
+    font-size: 20px;
+}
+
+.gdpr p, .gdpr ul{
+    font-size: 15px;
+}
+
+/*Leadboard table*/
+#leaderboard{
+    width: 50%;
+    z-index: 1;
+}
+
+table{
+    background-color: var(--table-border);
+    width: 90%;
+    margin-left: 10%;
+}
+
+th{
+    background-color: var(--tableheader-color);
+    color: var(--text-color);
+}
+
+tr{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    transition: 0.1s;
+    text-align: center;
+    z-index: 1;
+}
+
+th,td{
+    padding: 5px 10px;
+}
+
+tr:hover{
+    background-color: grey;
+}
+
+/*Start button*/
+.start{
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+}
+
+.scaling{
+    margin-top: 10%;
+}
+
+.scale{ 
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0s;
+    z-index: 1;
+}
+  
+.scale:hover{
+background-color: grey;
+cursor: pointer;
+}
+
+/*adaptive design*/
+@media screen and (max-width: 800px) {
+    .upper{
+        height: fit-content;
+        flex-shrink: 1;
+    }
+    .lower{
+        padding: 0;
+        flex-direction: column;
+    }
+    #leaderboard{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    table{
+        width: 80%;
+    }
+    .start{
+        width: 100%;
+    }
+    .start-quiz{
+        max-width: 80%;
+        min-width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .scaling{
+        display: none;
+    }
+}
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.5;
+    z-index: 0;
+  }

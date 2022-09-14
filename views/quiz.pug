@@ -1,0 +1,34 @@
+extends layout
+block content
+    link(rel='stylesheet' href='/stylesheets/quiz.css')
+    script(src='/scripts/scaling.js')
+    script(src='/scripts/quiz-page.js')
+
+    .buffer-left
+        #mascot-happy
+                img(src='/images/cute_globe.png' style='height: 400%; width:500%;')
+        #mascot-sad
+                img(src='/images/sad_globe.png' style='height: 400%; width: 500%; ')
+        #mascot-meh
+                img(src='/images/meh_globe.png' style='height: 500%; width: 600%; ')
+    #quiz-container
+        #quiz 
+            h1='Get ready...'
+            #countdown
+            p=`Keep an eye on the emoji in the progress bar to see how you're doing!`
+            h2=`Use keys 1-4 to select your answer`
+        #progress-bar
+            #inner-bar
+            #emoji='😁'
+    .buffer
+        svg.timer( width='160px' height='160px')
+            defs
+                lineargradient#GradientColor
+                    stop(offset='0%' stop-color='#ffffff')
+                    stop(offset='100%' stop-color='#2066fc')
+            circle#timer( cx='80' cy='80' r='70' stroke-linecap='round')
+        
+            
+
+    
+        

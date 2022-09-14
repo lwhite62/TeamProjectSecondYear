@@ -1,0 +1,32 @@
+extends layout
+block content
+  link(rel='stylesheet' href='/stylesheets/index.css')
+  link(rel='stylesheet' href='/stylesheets/style.css')
+  script(src='/scripts/main-page.js')
+  script(src='/scripts/show-table.js')
+  
+  .container 
+    .upper
+      h1#username='Welcome, '
+      h1#location='You\'re doing a quiz for: '
+
+    .popup 
+      h1='Terms of Use'
+      .gdpr 
+        include ./gdpr.pug
+      button(onclick='acceptGDPR()').accept='Accept'
+    .lower
+      #leaderboard
+      .start
+        button.start-quiz(onclick='window.location.href="/quiz"')='Start the quiz'
+          
+        .scaling
+          h3(style='font-size:30px') Font Size:
+          button.scale(onclick='setTextSize(125)')='Normal'
+          button.scale(onclick='setTextSize(150)')='Medium'
+          button.scale(onclick='setTextSize(175)')='Large'
+        h3(style='font-size:30px') Theme:
+        button.scale(onclick='toggletheme()')='Light | Dark'
+        
+
+

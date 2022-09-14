@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+:root{
+    --default-font: monospace;
+}
+
+/*
+Default element style
+*/
+body {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+
+    padding: 0px;
+    margin: 0px;
+
+    height: 100vh;
+    font-family: var(--default-font);
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.navbar{
+    width: 100%;
+    margin-top:1%;
+    display: flex;
+}
+
+ul{
+    width:100%
+}
+
+ul a{
+    color: black;
+    display: inline;
+    margin-right: 1%;
+    font-size: larger;
+ 
+}
+
+button, input[type=submit]{
+    padding: 20px 40px;
+    
+    font-size:1.25em;
+    font-family: var(--default-font);
+    font-weight: bold;
+
+    border-radius: 1%;
+    border: var(--buttonborder-color);
+    filter: drop-shadow(1px 1px 1px black);
+    transition: 0s;
+    background: var(--button-color);
+    color: var(--text-color);
+}
+
+button:hover, input[type=submit]:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+button.signin{
+    white-space: nowrap;
+    width:max-content;
+    height: max-content;
+}
+
+p{
+    font-size: 20px;
+}
+
+/*Header style*/
+.header{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    background-color: var(--header-color);
+    border-bottom: var(--headerborder-color);
+    filter: drop-shadow(1.25px 1.25px 1.25px rgb(0, 0, 0));
+}
+
+.usernameText {
+    padding-right: 25px;
+    padding-top: 25px;
+}
+
+.usernameText {
+    padding-right: 25px;
+    padding-top: 25px;
+}
+
+.logo{
+    position: relative;
+    margin-left: 2.5%;
+    fill:#ffffff;
+}
+
+.logo img{
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-size: 60px;
+    height: 80px;
+    -webkit-filter: var(--logo-color);
+    filter: var(--logo-color);
+}
+
+.buttons{
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#signin-out{
+    position: relative;
+    padding: 0px 5px;
+    margin-right: 10px;
+    max-height: 80%;
+    min-height: 50%;
+    background: var(--signinbutton-color);
+    
+}
+
+#profile{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    border: var(--profile-border);
+    margin-right: 10px;
+}
+
+#profile:hover{
+    cursor: pointer;  
+    filter:grayscale();
+}
+
+/*Main page class*/
+.page{
+    margin-top: 83.5px;
+    display: flex;
+    display: -webkit-flex;
+    flex-grow: 1;
+}
+
+/*Footer style*/
+.footer{
+    height: 50px;
+    margin-left: 2.5%;
+    position: relative;
+    
+}
+
+.footer a{
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
+/*Error page style*/
+.status{
+    font-size: 50px;
+}
+
+.error{
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none; 
+    color: var(--link-color);
+}
+
+button#signin-out:focus-visible{
+    background-color: yellow;
+    outline-color: red;
+    outline-offset: 1px;
+    color: rgb(0, 0, 0);
+}
+
+button:focus-visible{
+    background-color: yellow;
+    outline-color: red;
+    outline-offset: 1px;
+    color: black;
+}
+
+.footer a:focus-visible{
+    background-color: yellow;
+    outline-color: red;
+    outline-offset: 1px;
+    color:black;
+}
+
+input:focus-within{
+    background-color: white;
+    outline: 0px;
+}
+
+textarea:focus-within{
+    background-color: white;
+    outline: 0px;
+}
+
+#g-signin:focus-visible{
+    outline-color: red;
+    outline-offset: 2px;
+    color:black;
+}
+
+a:focus-visible{
+    outline-color: red;
+    background-color: yellow;
+    color:black;
+}
+
+:focus-visible{
+    -webkit-filter: yellow;
+    filter: yellow;
+}
+
+#profile:focus-visible{
+    outline-color: red;
+    outline-offset: 2px;
+    color:black;
+}

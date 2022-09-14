@@ -1,0 +1,7 @@
+link(rel="stylesheet" href="stylesheets/style.css")
+.error
+  h2.status= error.status
+  .stacktrace
+    pre #{error.stack}
+
+  a(href='/')='Back to safety'

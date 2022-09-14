@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    link(rel="stylesheet" href="/stylesheets/quiz.css")
+    link(rel="stylesheet" href="/stylesheets/score.css")
+    script(src="scripts/scores.js")
+    script(src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js")
+
+   
+    .buffer-left
+        #mascot-happy
+                img(src='/images/cute_globe.png' style='height: 500%; width:600%;')
+        #mascot-sad
+                img(src='/images/sad_globe.png' style='height: 500%; width: 600%; ')
+        #mascot-meh
+                img(src='/images/meh_globe.png' style='height: 500%; width: 600%; ')
+    .quiz-end
+        h1='Well Done!'
+        h3='You scored:'
+        #score 
+        button.home(onclick='window.location.href="/"')='Home'
+        br
+        button.play-again(onclick='window.location.href="/quiz"')='Play Again'
+        br
+        button.review-answers(onclick='window.location.href="/review"')='Review Answers'
+        br
+        button.tweet-score(onclick="tweet()")='Share your score'
+        br
+        button.achievements(onclick='window.location.href ="/achievements"')= 'Achievements'
+    canvas#my-canvas
